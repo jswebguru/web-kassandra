@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "Formular";
+  src: url("assets/fonts/Formular-Light.eot");
+  src: url("assets/fonts/Formular-Light.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/Formular-Light.woff2") format("woff2"), url("assets/fonts/Formular-Light.woff") format("woff"),
+    url("assets/fonts/Formular-Light.ttf") format("truetype"),
+    url("assets/fonts/Formular-Light.svg#Formular-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Formular";
+  src: url("assets/fonts/Formular.eot");
+  src: url("assets/fonts/Formular.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/Formular.woff2") format("woff2"), url("assets/fonts/Formular.woff") format("woff"),
+    url("assets/fonts/Formular.ttf") format("truetype"), url("assets/fonts/Formular.svg#Formular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("assets/fonts/Formular-Medium.eot");
+  src: url("assets/fonts/Formular-Medium.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/Formular-Medium.woff2") format("woff2"), url("assets/fonts/Formular-Medium.woff") format("woff"),
+    url("assets/fonts/Formular-Medium.ttf") format("truetype"),
+    url("assets/fonts/Formular-Medium.svg#Formular-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Formular";
+  src: url("assets/fonts/Formular-Bold.eot");
+  src: url("assets/fonts/Formular-Bold.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/Formular-Bold.woff2") format("woff2"), url("assets/fonts/Formular-Bold.woff") format("woff"),
+    url("assets/fonts/Formular-Bold.ttf") format("truetype"),
+    url("assets/fonts/Formular-Bold.svg#Formular-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Formular";
+  src: url("assets/fonts/Formular-Black.eot");
+  src: url("assets/fonts/Formular-Black.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/Formular-Black.woff2") format("woff2"), url("assets/fonts/Formular-Black.woff") format("woff"),
+    url("assets/fonts/Formular-Black.ttf") format("truetype"),
+    url("assets/fonts/Formular-Black.svg#Formular-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Css Reset */
+
+body {
+  font-family: "Formular";
+  line-height: 1.5em;
+  font-size: 14px;
+  margin: 0;
+  position: relative;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a,
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  margin: 0;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+input[type="text"]::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+input[type="text"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+input[type="text"]:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+}
+input[type="text"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+
+.wrapper {
+  background-color: #07080b;
+  width: calc(100vw - 17px);
+  height: 100vh;
+}
+
+.content .bg-img {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  top: 0;
+  min-height: 100vh;
+  object-fit: cover;
+}
+.btn {
+  z-index: 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  width: 240px;
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(36, 70, 71, 1) 0%, rgba(19, 20, 22, 1) 100%);
+  border: none;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  z-index: -1;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(30, 71, 73, 1) 0%, rgba(13, 13, 15, 1) 100%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 44px;
+  background-image: url(assets/img/button-curv.png);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .btn {
+    width: 180px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .isMenu .header-right {
+    margin-left: 0 !important;
+  }
+  .isMenu .mobile-menu-close {
+    display: block !important;
+  }
+  .isMenu .mobile-menu {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    background-color: #07080b;
+    width: auto;
+    height: auto;
+  }
+  .content {
+    padding: 70px 10px 20px;
+}
+}
+
+
+
+

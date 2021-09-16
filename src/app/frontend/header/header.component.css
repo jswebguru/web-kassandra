@@ -1,0 +1,102 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 75px 65px 0 65px;
+    z-index: 5;
+}
+.header-left {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.header-right {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.header-right li {
+    margin-left: 40px;
+}
+.header-right li a {
+    color: #787d90;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+}
+.header-right li:last-child a {
+    background: -webkit-linear-gradient(#fff, #787d90);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.typing {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: normal;
+    color: #ffffff;
+    opacity: 0.4;
+    display: block;
+    margin-left: 20px;
+    margin-top: 9px;
+}
+.mobile-menu,
+.mobile-menu-close {
+    display: none;
+}
+@media screen and (max-width: 1500px) {
+    header {
+        padding: 50px 50px 0 50px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header-right {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #305862;
+        bottom: 0;
+        width: 100%;
+        max-width: 320px;
+        flex-direction: column;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        border-right: 3px solid#5debed;
+        padding-top: 20px;
+        transition: all 0.3s linear;
+        margin-left: -320px;
+        z-index: 10;
+    }
+    .header-right li {
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    .mobile-menu {
+        display: block;
+        color: #5ceaeb;
+        font-size: 24px;
+    }
+    .mobile-menu-close {
+        color: #5ceaeb;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        padding: 15px;
+    }
+    .header-left > a > img {
+        max-width: 150px;
+    }
+    .header-right {
+        max-width: 75%;
+        margin-left: -75%;
+    }
+}

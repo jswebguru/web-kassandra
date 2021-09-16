@@ -1,0 +1,68 @@
+<div class="wrapper">
+    <div class="content">
+        <!-- <img class="bg-img" src="assets/img/bg-chat.jpg" alt="img"> -->
+        <video class="bg-img" width="100%" type="video/mp4" height="100%" loop="true" autoplay="autoplay" oncanplay="this.play()" onloadedmetadata="this.muted = true">
+            <source src="assets/video/cassandra.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+
+        <span *ngIf="isThinking" class="thinking">thinking...</span>
+
+        <button *ngIf="aiThoughts" (click)="toggleAiThoughts()" type="button" class="aithoughts-toggle">ai thoughts <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+
+        <!-- <span class="general-text">{{thought}}</span> -->
+        <ul *ngIf="aiThoughts" class="general-text aithoughts isaithoughts">
+            <li *ngIf="aiThoughts['Chatty Kassie']" class="thoughtSingle thought_Chatty" [class.selected]="aiThoughts.selected == 'Chatty Kassie'"> <b>Idle Fripperies</b> - {{aiThoughts["Chatty Kassie"]}}
+            </li>
+            <li *ngIf="aiThoughts.btn" class="thoughtSingle thought_btn" [class.selected]="aiThoughts.selected == 'btn'"> <b>Intuition</b> - {{aiThoughts.btn}}</li>
+            <li *ngIf="aiThoughts.kass" class="thoughtSingle thought_kass" [class.selected]="aiThoughts.selected == 'kass'"> <b>Conscience</b> - {{aiThoughts.kass}}</li>
+            <li *ngIf="aiThoughts.truth" class="thoughtSingle thought_truth" [class.selected]="aiThoughts.selected == 'truth'"> <b>Veracity</b> - {{aiThoughts.truth}}</li>
+            <li *ngIf="aiThoughts.kon" class="thoughtSingle thought_kon" [class.selected]="aiThoughts.selected == 'kon'"> <b>Konsciousness</b> - {{aiThoughts.kon}}</li>
+        </ul>
+
+
+        <div class="page-content">
+
+            <form class="chat" #chat="ngForm" (ngSubmit)="onChat(chat.value, chat)">
+                <ul class="chating-msg" id="style-2">
+
+                    <div class="chat-scroll">
+
+                        <li>
+                            <label for="">Kassandra</label>
+                            <span>Hi there!</span>
+                        </li>
+                        <!-- <li>
+                        <label for="">Cassandra</label>
+                        <span>How are you? </span>
+                    </li> -->
+                        <ng-container *ngFor="let item of myChatArray">
+                            <li class="your-msg">
+                                <label for="">You</label>
+                                <span>{{item.myMessage}}</span>
+                            </li>
+                            <li *ngIf="item.cassandraResponse">
+                                <label for="">Kassandra</label>
+                                <span>{{item.cassandraResponse}}</span>
+                            </li>
+                        </ng-container>
+                    </div>
+
+                </ul>
+                <!-- <div *ngIf="user_input.invalid && (user_input.dirty || user_input.touched)" class="alert">
+                    <div *ngIf="user_input.errors?.required">
+                        message is required.
+                    </div>
+                </div> -->
+                <input maxlength="80" autocomplete="off" (ngModelChange)="inputLength($event.length)" type="text" *ngIf="isWriteMsg" required ngModel name="user_input" #user_input="ngModel" placeholder="Write your message end press enter...">
+                <span class="gradiant-border">
+                    <span class="character-count">{{inputCharacterLength}}/80</span>
+                </span>
+
+            </form>
+
+        </div>
+    </div>
+    <a class="designed-by" href="#">designed by <img src="assets/img/designed-by.png" alt="img"></a>
+</div>

@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <div class="content">
+        <img class="bg-img" src="assets/img/bg-writemessage.jpg" alt="img">
+        <div class="overlay"></div>
+        <div class="page-content">
+            <h1 class="main-titel">If you would be interested in <br> talking to me, write me a <br> message ...</h1>
+            <form class="writemessage" #writemessage="ngForm" (ngSubmit)="onWriteMessage(writemessage.value)">
+                <input required type="text" ngModel name="user_input" placeholder="Write your message ...">
+                <span class="gradiant-border"></span>
+                <button class="btn" type="submit">Send message</button>
+            </form>
+
+        </div>
+    </div>
+    <a class="designed-by" href="#">designed by <img src="assets/img/designed-by.png" alt="img"></a>
+</div>

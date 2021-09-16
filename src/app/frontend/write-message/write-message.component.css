@@ -1,0 +1,105 @@
+.wrapper {
+    background-color: #131416;
+    width: calc(100vw - 0px);
+}
+.page-content {
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.content > .bg-img {
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 0;
+    height: 100vh;
+    transform: translateX(-50%);
+}
+
+.main-titel {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 65px;
+    background: -webkit-linear-gradient(#aeb5cd, #787d90);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 130px;
+}
+
+.designed-by {
+    position: fixed;
+    color: #fff;
+    bottom: 55px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    transform: translateX(-50%);
+    font-size: 18px;
+}
+.designed-by img {
+    margin-left: 20px;
+}
+
+.writemessage input {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.gradiant-border {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #5debec 53.65%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50px;
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1500px) {
+    .main-titel {
+        font-size: 34px;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .main-titel {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-titel {
+        font-size: 18px;
+    }
+    .page-content {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+    .page-content {
+        top: 15%;
+    }
+    .main-titel br {
+        display: none;
+    }
+    .gradiant-border {
+        margin-bottom: 15px;
+    }
+    .designed-by {
+        bottom: 10px;
+    }
+    .main-titel {
+        margin-bottom: 10px;
+    }
+}
